@@ -1,0 +1,4 @@
+allure-pytest>=2.0.0b1
+cx-Oracle>=5.2
+pytest>=3.0.7
+requests>=2.14.2
