@@ -7,7 +7,6 @@ import requests
 import json
 from config.parser import parser
 
-
 class Users():
     '''
     Method to call various methods of Users

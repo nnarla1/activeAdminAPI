@@ -9,7 +9,7 @@ import random
 
 from libs.users import Users as Users
 from assets import users_sample as json_data
-import pdb
+
 
 class TestUsers(Users):
     '''
@@ -37,8 +37,9 @@ class TestUsers(Users):
         user_id1 =  post_user_resp['id']
         print ("User_id created - ") + str(user_id1)
         
-        phone1 = post_user_resp ['phone']
-        print ("City posted - ") + str(phone1)
+        website1 = "www.edureka.com"
+        post_user_resp['website'] = website1
+        print ("existing website - ") + str(website1)
         
         #  test2:----------------get json ---------------
         
@@ -47,21 +48,17 @@ class TestUsers(Users):
         user_id2 = get_user_resp["id"]
         assert user_id1 == user_id2,"get results for user_id failed!"
         
-        print("Get results passed for user_id - ") + str(user_id2)
+        print("Results passed for get user_id - ") + str(user_id2)
            
         #  test3:---------------put json-----------------
-        if (user_id1 == user_id2):
-            
-            website = "edureka.com"
-            post_user_resp['website'] = website
-            return (json.dumps(post_user_resp))
-   
-            put_user_resp = self.put_users(userid = user_id2,
+        return (json.dumps(post_user_resp))
+        
+        put_user_resp = self.put_users(userid = user_id2,
                                        headers = reqheaders,
                                        payload = post_user_resp)
-            print("Get results of edited phone- ") , put_user_resp
+        print("Get results of edited phone- ") , put_user_resp
 
-        #city2 = put_user_resp['address']['city']
+        #   city2 = put_user_resp['address']['city']
         
         #assert city1 != city2, "City is not edited!"
         

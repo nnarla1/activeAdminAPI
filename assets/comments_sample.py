@@ -1,7 +1,7 @@
 """ Testdata to be used for posts"""
 
 
-comments1={
+comments_json2={
 "postId": 12,
 "id": 24381,
 "name": "test post method",
@@ -9,7 +9,7 @@ comments1={
 "body": "laudantium enim quasi est quidem magnam voluptate ipsam eos temp"
 }
 
-comments2={
+comments_json1={
 "postId": 12,
 "name": "test post method",
 "email": "Eliseo@gardner.biz",
