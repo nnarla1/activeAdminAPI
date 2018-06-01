@@ -7,6 +7,6 @@ config_folder = os.path.dirname(__file__)
 parser = ConfigParser.ConfigParser()
 
 # general.cfg holds default settings
-general_config = os.path.join(config_folder, 'general.cfg')
+general_config = os.path.join(config_folder, 'appenv.cfg')
 
 parser.read(general_config)

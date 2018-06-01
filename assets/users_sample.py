@@ -1,7 +1,7 @@
 """ Testdata to be used to post users"""
 
 
-users1={
+users_json1={
 "name": "testapi0090909",
 "username": "api090909",
 "email": "api090909@users.com",
